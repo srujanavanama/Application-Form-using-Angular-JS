@@ -14,6 +14,18 @@
                 <label for="comment">Comment</label>
                 <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
             </div>
+            <div class="mb-3">
+                <div ng-app="applicationType" ng-controller="myCtrl">
+                    <label for="applicationType">Application Type</label>
+                    <select name="applicationType" id="applicationType" ng-model="selectApplicationType">
+                    <!-- <option ng-repeat="let applicationType of applicationTypes" value="{{applicationType.value}}">{{applicationType,label}}</option> -->
+                        <option>Select Application Type</option>
+                        <option value="home">Home Loan</option>
+                        <option value="business">Business Loan</option>
+                        <option value="personal">Personal Loan</option>
+                    </select>
+                    </div>
+            </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="firstName">First Name</label>

@@ -15,6 +15,10 @@ export class AppFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public applicationTypes:any = [{value:"home", label:"Home Loan"}, 
+                                {value:"personal", label:"Personal Loan"}, 
+                                {value:"business", label:"Business Loan"}];
+
   applicationForm = this.fb.group({
     firstName: ['', Validators.minLength(3)],
     lastName: new FormControl('Enter Last Name', Validators.minLength(2))
