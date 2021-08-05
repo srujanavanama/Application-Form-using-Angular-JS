@@ -6,15 +6,7 @@
     <div>
         <h4 class="mb-3">Application Details</h4>
         <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="test1">Test 1</label>
-                <input id="test1" type="text" class="form-control">
-            </div>  
-            <div class="form-group">
-                <label for="comment">Comment</label>
-                <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
-            </div>
-            <div class="mb-3">
+            <div class="mb-3 form-group">
                 <div ng-app="applicationType" ng-controller="myCtrl">
                     <label for="applicationType">Application Type</label>
                     <select name="applicationType" id="applicationType" ng-model="selectApplicationType">
@@ -26,7 +18,36 @@
                     </select>
                     </div>
             </div>
-            <div class="row">
+            <div class="mb-3 form-group">
+                <label for="amount">Amount</label>
+                <input id="amount" type="number" class="form-control">
+            </div>
+            <div className="mb-3 form-group">
+                Status
+                <div className="d-block my-3">
+                  <div className="custom-control custom-radio">
+                    <label className="align-middle">
+                    <input
+                      type="radio"
+                      value="active"
+                      name="applicationStatus"
+                      ng-model="selectApplicationStatus" />
+                      Active
+                    </label>
+                  </div>
+                  <div className="custom-control custom-radio">
+                    <label className="align-middle">
+                    <input
+                      type="radio"
+                      value="inactive"
+                      name="applicationStatus"
+                      ng-model="selectApplicationStatus" />
+                      InActive
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="row form-group">
                 <div class="col-md-6 mb-3">
                     <label for="firstName">First Name</label>
                     <input id="firstName" type="text" class="form-control">
